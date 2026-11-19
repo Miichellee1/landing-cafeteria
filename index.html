@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Café Aroma: café de especialidad, pastelería artesanal y un lugar para quedarte.">
+  <title>Café Aroma | Café de especialidad</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container bar">
+      <a href="#inicio" class="brand">☕ Café Aroma</a>
+      <button id="toggle" class="toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      <nav id="nav" class="nav">
+        <a href="#nosotros">Nosotros</a>
+        <a href="#menu">Menú</a>
+        <a href="#horarios">Horarios</a>
+        <a href="#reservas" class="cta">Reservar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="container hero-in">
+        <h1>El mejor café,<br>una pausa perfecta</h1>
+        <p>Granos de origen, tostado artesanal y pastelería hecha cada mañana.</p>
+        <a href="#menu" class="btn">Ver el menú</a>
+      </div>
+    </section>
+
+    <section id="nosotros" class="section container">
+      <h2>Nuestra historia</h2>
+      <div class="about">
+        <p>Nacimos en 2018 con una idea simple: servir café de verdad, en un lugar donde dé gusto quedarse. Trabajamos directamente con pequeños productores y tostamos en pequeños lotes para cuidar cada aroma.</p>
+        <ul class="features">
+          <li><span>🌱</span><strong>Origen directo</strong><small>Granos de comercio justo</small></li>
+          <li><span>🔥</span><strong>Tostado artesanal</strong><small>Lotes pequeños y frescos</small></li>
+          <li><span>🥐</span><strong>Pastelería diaria</strong><small>Horneada cada mañana</small></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="menu" class="section alt">
+      <div class="container">
+        <h2>Menú</h2>
+        <div class="tabs" role="tablist">
+          <button class="tab active" role="tab" data-target="cafes" aria-selected="true">Cafés</button>
+          <button class="tab" role="tab" data-target="frios" aria-selected="false">Fríos</button>
+          <button class="tab" role="tab" data-target="dulces" aria-selected="false">Dulces</button>
+        </div>
+
+        <div id="cafes" class="panel active" role="tabpanel">
+          <article class="item"><div><h3>Espresso</h3><p>Intenso y aromático</p></div><span class="price">$2.200</span></article>
+          <article class="item"><div><h3>Cappuccino</h3><p>Espresso, leche vaporizada y espuma</p></div><span class="price">$3.200</span></article>
+          <article class="item"><div><h3>Latte</h3><p>Suave y cremoso</p></div><span class="price">$3.400</span></article>
+          <article class="item"><div><h3>Mocaccino</h3><p>Café con chocolate belga</p></div><span class="price">$3.800</span></article>
+        </div>
+        <div id="frios" class="panel" role="tabpanel">
+          <article class="item"><div><h3>Cold Brew</h3><p>Extracción en frío por 18 horas</p></div><span class="price">$3.600</span></article>
+          <article class="item"><div><h3>Iced Latte</h3><p>Espresso, leche y hielo</p></div><span class="price">$3.500</span></article>
+          <article class="item"><div><h3>Limonada de menta</h3><p>Natural y refrescante</p></div><span class="price">$2.900</span></article>
+        </div>
+        <div id="dulces" class="panel" role="tabpanel">
+          <article class="item"><div><h3>Croissant de mantequilla</h3><p>Hojaldrado y crujiente</p></div><span class="price">$2.500</span></article>
+          <article class="item"><div><h3>Cheesecake de frutos rojos</h3><p>Porción individual</p></div><span class="price">$4.200</span></article>
+          <article class="item"><div><h3>Brownie con nueces</h3><p>Húmedo e intenso</p></div><span class="price">$2.800</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="horarios" class="section container">
+      <h2>Horarios y ubicación</h2>
+      <div class="info">
+        <table>
+          <caption class="sr">Horarios de atención</caption>
+          <tbody>
+            <tr><th scope="row">Lunes a viernes</th><td>7:30 – 20:00</td></tr>
+            <tr><th scope="row">Sábado</th><td>9:00 – 21:00</td></tr>
+            <tr><th scope="row">Domingo</th><td>9:00 – 15:00</td></tr>
+          </tbody>
+        </table>
+        <address>
+          <strong>Café Aroma</strong><br>
+          Av. Principal 1234, Santiago<br>
+          📞 +56 2 2345 6789<br>
+          ✉️ hola@cafearoma.example
+        </address>
+      </div>
+    </section>
+
+    <section id="reservas" class="section alt">
+      <div class="container narrow">
+        <h2>Reserva tu mesa</h2>
+        <form id="reserva" class="form" novalidate>
+          <label>Nombre<input id="nombre" type="text" required></label>
+          <label>Correo<input id="email" type="email" required></label>
+          <div class="row">
+            <label>Fecha<input id="fecha" type="date" required></label>
+            <label>Personas
+              <select id="personas">
+                <option>1</option><option selected>2</option><option>3</option>
+                <option>4</option><option>5</option><option>6</option>
+              </select>
+            </label>
+          </div>
+          <p id="msg" class="msg" role="status"></p>
+          <button class="btn" type="submit">Confirmar reserva</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Café Aroma · Hecho con HTML, CSS y JavaScript</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
